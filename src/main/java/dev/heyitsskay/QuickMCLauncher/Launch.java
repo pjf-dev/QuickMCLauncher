@@ -97,6 +97,9 @@ public class Launch {
                     }
                 }
                 File del = new File(vBinDir.getAbsolutePath() + File.separator + "META-INF");
+                for (File d : del.listFiles()) {
+                    d.delete();
+                }
                 del.delete();
             }
             StringBuilder command = new StringBuilder();
